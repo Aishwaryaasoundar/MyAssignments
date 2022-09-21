@@ -1,30 +1,30 @@
-package week1.day2;
+package Week3;
 
-public class Palindrome 
-{
- public static void main(String[] args) 
- {
-	int num = 34343;	
-	int temp = num;
-	int reverse=0;
-	int rightDigit;
+public class Palindrome {
+	/*
+	 * Pseudo Code
 	
-	while(temp !=0 )
-	{
-		rightDigit = temp % 10;
-		reverse = reverse*10 + rightDigit;
-		temp = temp/10;
-	}	
+	 * a) Declare A String value as"madam"
+	 
+	 * b) Declare another String rev value as ""
+	 * c) Iterate over the String in reverse order
+	 * d) Add the char into rev
+	 * e) Compare the original String with the reversed String, if it is same then print palinDrome 
+	 
+	 * Hint: Use .equals or .equalsIgnoreCase when you compare a String 
+	 */
+public static void main(String[] args) {
 	
-	if(num == reverse)
-	{
-		System.out.println(num +" is palindrome");
-	}
-	else
-	{
-		System.out.println(num + " is Not palindrome");
-	}
-	
-	
- }
+
+
+	String str= "MadAm";
+    String reversestr="";
+    for(int i=str.length()-1;i>=0;i--) {
+        reversestr=reversestr+str.charAt(i);
+    }if(str.equalsIgnoreCase(reversestr)) {
+        System.out.println("its the palindrome string");
+    }else {
+        System.out.println("its not palinrome string");
+    }
+}
 }
